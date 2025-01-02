@@ -57,6 +57,10 @@ h1 {
   align-items: center;
 }
 
+.about--tablet {
+  display: none;
+}
+
 .about__heading {
   margin: 0px;
   font-size: 3.5rem;
@@ -86,6 +90,7 @@ h1 {
 
 .about__img {
   max-width: 20rem;
+  float: left;
 }
 
 .accomplishments {
@@ -169,10 +174,21 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 600px) and (max-width: 1200px) {
-  
+  .about--tablet {
+    display: flex;
+  }
+
+  .about--desktop {
+    display: none;
+  }
+
+  .about__img {
+    transform: translate(-12%, -10%);
+  }
 }
 
 @media (max-width: 600px) {
@@ -204,5 +220,9 @@ h1 {
   main {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  .contact__heading-strip {
+    justify-content: center;
   }
 }
